@@ -3,8 +3,8 @@ email:              mustafa.zukic3@gmail.com
 description:        Hi there, my name is Mustafa and I'm an Android developer.
                     This is my personal website where I post blogs and stuff I do as developer. Feel free to contact me :)
 author:             Zukic Mustafa
-baseurl:            ""
-url:                ""
+baseurl:            "/blog"
+url:                "https://mzukic3.github.io"
 
 # Social Profiles
 github_username:    mzukic3
