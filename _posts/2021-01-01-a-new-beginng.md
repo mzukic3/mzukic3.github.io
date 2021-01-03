@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Creating Custom Views in Android "
-subtitle: "Pros for starting as mobile developer"
+subtitle: ""
 date: 2021-01-01 23:45:13 -0400
 background: '/img/posts/mobile.jpg'
 ---
