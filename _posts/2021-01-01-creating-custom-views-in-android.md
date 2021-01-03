@@ -17,7 +17,7 @@ background: '/img/posts/mobile.jpg'
 <p>To begin, we’ll define some basic terminology for a better understanding.</p>
 <p><strong>What is Android View?</strong></p>
 <p>Android View is the base class for building a user interface giving developers the opportunity to create complex&nbsp;designs. The View occupies a rectangular area on the screen, where it’s responsible for measuring, laying out and drawing itself along with its child elements. In addition, a View handles all user event inputs.</p>
-<p><img src="/media/1535/graph-1-1x.jpg" alt="Flowchart explaining Android View." data-udi="umb://media/68cebb7dbbd94ade98102a7bb6a6fa15"></p>
+<p><img src="/img/posts/01.jpg" alt="Flowchart explaining Android View." data-udi="umb://media/68cebb7dbbd94ade98102a7bb6a6fa15"></p>
 <p><strong>What is a ViewGroup?</strong></p>
 <p>A ViewGroup is a special view that is able to contain other Views (children) and define its own layout properties. It is also a place where each subview can draw itself.</p>
 <p><strong>What is a Custom View?</strong></p>
@@ -39,11 +39,11 @@ background: '/img/posts/mobile.jpg'
 <li>The Measuring &amp; Layout Stage</li>
 <li>The Drawing stage</li>
 </ul>
-<p><img src="/media/1536/graph-2-1x.jpg" alt="Diagram of measure, layout and draw stages when Android draws Views." data-udi="umb://media/ffa5db384e084c91801bdeed582344f3"></p>
+<p><img src="/img/posts/02.jpg" alt="Diagram of measure, layout and draw stages when Android draws Views." data-udi="umb://media/ffa5db384e084c91801bdeed582344f3"></p>
 <p><strong>The Measuring &amp; Layout Stage</strong></p>
 <p>In this stage, we have the opportunity to tell the Android system the size we’d like our custom View to be, depending on the constraints provided by the parent.</p>
 <p>The following numbered diagram displays how each View is measured by showing each step:</p>
-<p><img src="/media/1564/graph-6-together-1x.jpg" alt="Numbered diagram showing steps for measuring and layout stage for creating Android Views." data-udi="umb://media/990d98c820f74042a6c1489ccb5edbdb"></p>
+<p><img src="/img/posts/03.jpg" alt="Numbered diagram showing steps for measuring and layout stage for creating Android Views." data-udi="umb://media/990d98c820f74042a6c1489ccb5edbdb"></p>
 <p>1. The child View defines the <strong>LayoutParams</strong> programmatically or in the&nbsp;<strong>XML</strong> and the parent retrieves these values using the&nbsp;<strong>getLayoutParams().</strong></p>
 <p>2. The parent calculates the <strong>MeasureSpecs</strong> and passes it down using the&nbsp;<strong>child.measure().</strong> The <strong>Measurespecs</strong> contain the mode and the value.</p>
 <p>The three modes of measurement are:</p>
@@ -51,14 +51,14 @@ background: '/img/posts/mobile.jpg'
 <p>3. The&nbsp;<strong>onMeasure()</strong> method is called with the&nbsp;<strong>MeasureSpecs</strong> parameters. In this method, the View calculates its desired width/height and sets it using the <strong>setMeasuredDimension</strong>. Keep in mind that the <strong>setMeasuredDimension&nbsp;</strong>method must be called inside measure otherwise it will cause a runtime exception.</p>
 <p>4.&nbsp;The next and final phase is the layout phase. In this phase, the parent calls the&nbsp;<strong>child.layout()</strong> and sets the final size and position of the child. When implementing your custom View, you should only override the&nbsp;<strong>onLayout()&nbsp;</strong>method if your View has other subviews.</p>
 <p>To conclude, the measuring process is like a negotiation between a parent and child. The child calculates its desired width &amp; height, but the parent is the one who makes the final call setting the position and size of its child.</p>
-<p><img src="/media/1540/graph-4-2x.jpg" alt="Diagram of how android draws views." data-udi="umb://media/2ce51367c8f5468e837ecd38e5da5d5c"></p>
+<p><img src="/img/posts/04.jpg" alt="Diagram of how android draws views." data-udi="umb://media/2ce51367c8f5468e837ecd38e5da5d5c"></p>
 <p><strong>Drawing Stage</strong></p>
 <p>The last and most important step in drawing a custom View is to override the <strong>onDraw()</strong> method. The Canvas is a base class that defines many methods for drawing text, bitmaps, lines and other graphic primitives.</p>
 <p>Each parent will draw itself and then will request that each child do the same. An interesting side effect is when the parent draws itself first and it ends up on the bottom as its children are drawn on the top covering it.</p>
 <h2>Creating a Custom View</h2>
-<p><img src="/media/1546/meme-1x.jpg" alt="Philip J. Fry from Futurama saying &quot;Show me the code and stop talking!&quot;" data-udi="umb://media/3823a67c07e34da68ff1d0d73fbfe166"></p>
+<p><img src="/img/posts/05.jpg" alt="Philip J. Fry from Futurama saying &quot;Show me the code and stop talking!&quot;" data-udi="umb://media/3823a67c07e34da68ff1d0d73fbfe166"></p>
 <p>Now for the part that we’ve all been waiting for: the code. Let’s take a look at how to create a custom View using Kotlin. For this demonstration, we’ll be creating a Battery Meter to show the current status of a battery. The following diagram displays the three different statuses of a battery:</p>
-<p><img src="/media/1597/app-1x.jpg" alt="Diagram of the three different statuses of a battery." data-udi="umb://media/0f321d04f0a64a3b8c0ff4932ede55b8"></p>
+<p><img src="/img/posts/06.jpg" alt="Diagram of the three different statuses of a battery." data-udi="umb://media/0f321d04f0a64a3b8c0ff4932ede55b8"></p>
 <p>We can follow these steps in order to create a BatteryMeterView:</p>
 <p>Create a new <a rel="noopener noreferrer" href="https://developer.android.com/studio" target="_blank" title="https://developer.android.com/studio">Android Studio</a> project and add a new class called the BatteryMeterView.</p>
 <p>Extend it with the View class and add constructors matching super&nbsp;</p>
