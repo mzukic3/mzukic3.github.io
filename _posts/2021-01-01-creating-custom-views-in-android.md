@@ -105,7 +105,7 @@ To prepare our drawing, we will declare some paint objects, colours and shapes.
 Just like a basic widget, we want our View to have as little setup needed to initialize all of the properties with some default value.
 
 <span style="font-weight: 400;">Let’s create a companion object inside BatteryMeterView and add some constants to it.</span>
-
+```js
     companion object {
         private const val DEFAULT_CHARGING_STATE = false
         private const val DEFAULT_BATTERY_LEVEL = 70
@@ -118,7 +118,7 @@ Just like a basic widget, we want our View to have as little setup needed to ini
         private const val DEFAULT_CHARGING_COLOR = Color.DKGRAY
         private const val TEXT_SIZE_RATIO = 0.5f
     }
-
+```
     ​// Battery dimensions
     private var contentHeight: Int = 0
     private var contentWidth: Int = 0
